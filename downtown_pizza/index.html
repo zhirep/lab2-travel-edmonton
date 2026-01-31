@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Ordering System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <main class="card">
+    <h1>Pizza Ordering System</h1>
+
+    <form action="#" method="post">
+
+      <fieldset>
+        <legend>Customer Information</legend>
+
+        <div class="form-grid">
+          <label>Name:</label>
+          <input type="text" minlength="2" placeholder="Zhire Pelayo">
+
+          <label>Address:</label>
+          <input type="text" required placeholder="123 St, Edmonton, AB">
+
+          <label>Phone:</label>
+          <input type="tel" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>The Order</legend>
+
+        <div class="form-grid">
+
+          <label>Crust:</label>
+          <div class="flex-row">
+            <input type="radio" id="thin" name="crust" value="thin" required>
+            <label for="thin">Thin</label>
+            <input type="radio" id="classic" name="crust" value="classic">
+            <label for="classic">Classic</label>
+            <input type="radio" id="deep_dish" name="crust" value="deep_dish">
+            <label for="deep_dish">Deep Dish</label>
+          </div>
+
+          <label>Toppings:</label>
+          <div class="flex-row">
+            <label><input type="checkbox"> Pepperoni</label>
+            <label><input type="checkbox"> Mushroom</label>
+            <label><input type="checkbox"> Olives</label>
+            <label><input type="checkbox"> Green Peppers</label>
+            <label><input type="checkbox"> Pineapples</label>
+          </div>
+
+          <label for="quantity">Quantity:</label>
+          <input type="number" required min="1" max="10" placeholder="1-10"> </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Delivery and Payment</legend>
+
+        <div class="form-grid">
+          <label>Delivery Instructions:</label>
+          <textarea id="delivery" name="delivery" rows="4" cols="40">Write delivery instructions.</textarea>
+
+          <label>Preferred delivery date and time: </label>
+          <input type="datetime-local">
+
+          <label>Payment Method:</label>
+          <select name="payment" id="payment" required>
+            <option value=""> </option>
+            <option value="cash">Cash</option>
+            <option value="card">Card</option>
+            <option value="debit">Debit</option>
+          </select>
+
+          <button type="submit">Submit</button>
+        </div>
+      </fieldset>
+    </form>
+
+    <aside>
+      <table>
+        <caption>Order Summary</caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Details</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Base Pizza</td>
+            <td>Large (12"), Thin crust</td>
+            <td>$16.99</td>
+          </tr>
+
+          <tr>
+            <td>Toppings</td>
+            <td>Mushrooms, Olives, Extra cheese</td>
+            <td>$4.50</td>
+          </tr>
+
+          <tr>
+            <td>Delivery fee</td>
+            <td>Standard delivery</td>
+            <td>$3.99</td>
+          </tr>
+
+          <tr>
+            <td>Total</td>
+            <td></td>
+            <td>$25.48</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </aside>
+  </main>
+</body>
+
+</html>

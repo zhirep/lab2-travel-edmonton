@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  background: #eee;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+/* Grid example */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  align-items: center;
+}
+
+label {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Flex example */
+.flex-row {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* Validation feedback */
+input:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+
+input:not(:placeholder-shown):valid {
+  border: 2px solid green;
+}
+
+/* Responsive breakpoint */
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  label {
+    text-align: left;
+  }
+}
